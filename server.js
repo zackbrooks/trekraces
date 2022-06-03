@@ -20,6 +20,15 @@ app.get("/api/:alienName", (req, res) => {
   }
 });
 
+app.get("/api", (req, res) => {
+  let raceName = req.params.alienName.toLowerCase();
+  if (alienRaces[raceName]) {
+    res.json(alienRaces[raceName]);
+  } else {
+    res.json(alienRaces);
+  }
+});
+
 app.get("/lcars-lower-decks.min.css", (req, res) => {
   res.sendFile(path.join(__dirname, "/lcars-lower-decks.min.css"));
 });
