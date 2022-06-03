@@ -39,6 +39,4 @@ app.get("/lcars.js", (req, res) => {
 
 //Server
 
-app.listen(PORT, () => {
-  console.log(`You are listening on port: ${PORT}`);
-});
+app.listen(PORT, () => {});
